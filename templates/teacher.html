@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>教师团队</title>
+    <link rel="stylesheet" href="/static/css/index.css"></link>
+    <link rel="stylesheet" href="/static/css/jquery.bxslider.min.css"></link>
+    <link rel="stylesheet" href="/static/plugins/fontawesome/css/font-awesome.css"></link>
+    <link rel="stylesheet" href="/static/css/teacher.css"></link>
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery.bxslider.min.js"></script>
+</head>
+<body>
+<!-- T导航栏 -->
+{% include "head.html" %}
+<div class="teacher-container">
+    <!-- 一张图片 -->
+    <div class="teacher-img">
+        <img style="height: 300px;width: 100%" src="/static/images/teacher/teacher-logo.jpg"/>
+    </div>
+
+    {% for item in teacher_list %}
+        <div class="teacher-info">
+            <div class="teacher-info-img">
+                <img src="/{{item.img}}">
+            </div>
+            <div class="teacher-info-detail">
+                <div class="teacher-info-detail-name">{{item.name}}</div>
+                <div class="teacher-info-detail-alina">{{item.alias_name}}</div>
+                <div class="teacher-info-detail-tool">
+                    <i class="fa fa-weibo" aria-hidden="true"></i>
+                    <span>微博</span>
+                    <i class="fa fa-book" aria-hidden="true"></i>
+                    <span>博客</span>
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                    <span>视频</span>
+                </div>
+                <span class="teacher-info-detail-summary">
+                    {{item.summary}}
+                </span>
+            </div>
+        </div>
+    {% endfor%}
+    <!-- 校园生活的内容 -->
+    {% include "schoolLife.html" %}
+</div>
+
+{% include "foot.html" %}
+
+
+</body>
+</html>

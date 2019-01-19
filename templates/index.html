@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>首页</title>
+    <link rel="stylesheet" href="/static/css/index.css"></link>
+    <link rel="stylesheet" href="/static/css/jquery.bxslider.min.css"></link>
+    <link rel="stylesheet" href="/static/plugins/fontawesome/css/font-awesome.css"></link>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/jquery.bxslider.min.js"></script>
+</head>
+<body>
+<!-- T导航栏 -->
+{% include "head.html" %}
+<!-- 轮播图 -->
+<div class="dowebok">
+    <ul class="slider">
+        {% for item in BxSlide_list %}
+            <li>
+                <a href="{{ item.url }}" target="_blank">
+                    <img style="width: 100%;height: 300px" src="/static/{{ item.img }}">
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+<!-- 内容 -->
+<div class="main-content-band">
+    <div class="main-content">
+        <!-- 最新公告 -->
+        <div class="kind">
+            <div>
+                <span class="kind-line">|</span>
+                <span class="kind-text">最新公告</span>
+            </div>
+        </div>
+        <!--  最新公告的内容 -->
+        {% for item in inform_list %}
+            <div class="informInfo">
+                <div class="informInfo-bell">
+                    <i class="fa fa-bell-o" aria-hidden="true"></i>
+                </div>
+                <div class="informInfo-content">
+                    <span class="title">{{ item.title }}</span><br/>
+                    <span class="content">
+                        {{ item.summary }}
+                        <br>
+                        <a href="#" style="color:blueviolet">查看更多</a>
+                    </span>
+                </div>
+            </div>
+        {% endfor %}
+
+        <!-- 课程介绍 -->
+        <div class="kind course-top">
+            <div>
+                <span class="kind-line">|</span>
+                <span class="kind-text">课程介绍</span>
+            </div>
+        </div>
+        <!-- 课程介绍的内容 -->
+        {% for item in course_list %}
+            <div class="courseInfo">
+                <div class="courseInfo-img">
+                    <img style="height:40px;width:40px;border-radius:40px" src="/{{ item.img }}"/>
+                </div>
+                <div class="courseInfo-name">
+                    <span>{{ item.name }}</span>
+                </div>
+                <div class="courseInfo-introduce">
+                    <span>{{ item.summany }}</span>
+                </div>
+            </div>
+        {% endfor %}
+        <!-- 学员就业 -->
+        <div class="kind job-top">
+            <div>
+                <span class="kind-line">|</span>
+                <span class="kind-text">学员就业</span>
+            </div>
+        </div>
+        <!--  学员就业的内容 -->
+        <div class="jobInfo">
+            <div class="jobInfo-job">
+                <div class="jobInfo-job-student">
+                    <div class="student-avatar">
+                        <img style="width:100px;height:120px" src="/{{ student.img }}">
+                        <div class="student-avatar-money">
+                            <i class="fa fa-rmb" aria-hidden="true"></i>
+                            <span>{{ student.salary }}/月</span>
+                        </div>
+                        <div class="student-avatar-company">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span>{{ student.company }}</span>
+                        </div>
+                    </div>
+                    <div class="student-info">
+                        <span class="student-info-name">{{ student.name }}</span>
+                        <div class="student-info-stat">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-empty" aria-hidden="true"></i>
+                        </div>
+                        <div class="student-info-construct">
+                            {{ studentLetter.letter }}
+                        </div>
+                    </div>
+                </div>
+                <div class="jobInfo-job-company">
+                    <span class="jobInfo-job-company-title">招聘信息</span>
+                    <i class="fa fa-hand-o-down" aria-hidden="true"></i>
+                    <div class="company-name-salay">
+                        <span class="company-name">领航特使网络技术</span>
+                        <span class="company-salay">19999/月</span>
+                    </div>
+                    <div class="company-name-salay">
+                        <span class="company-name">爱奇艺网络技术</span>
+                        <span class="company-salay">19999/月</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jobInfo-avatar">
+                {% for item in student_list %}
+                    <div class="student-avatar">
+                        <img style="width:100px;height:120px" src="/{{ item.img }}">
+                        <div class="student-avatar-money">
+                            <i class="fa fa-rmb" aria-hidden="true"></i>
+                            <span>{{ item.salary }}/月</span>
+                        </div>
+                        <div class="student-avatar-company">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span>{{ item.company }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 校园生活 -->
+        <div class="kind school-top">
+            <div>
+                <span class="kind-line">|</span>
+                <span class="kind-text">校园生活</span>
+            </div>
+        </div>
+        <!-- 校园生活的内容 -->
+        {% include "schoolLife.html" %}
+
+        <!--  企业合作 -->
+        <div class="kind company-top">
+            <div>
+                <span class="kind-line">|</span>
+                <span class="kind-text">企业合作</span>
+            </div>
+        </div>
+        <div class="company-logo">
+            {% for item in company_list %}
+                <img class="company-logo-img" style="width:110px;height:120px;" src="/{{item.logo }}"/>
+            {% endfor %}
+        </div>
+    </div>
+    {% include "foot.html" %}
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('.slider').bxSlider({
+            auto: true,
+        });
+    });
+</script>
+</body>
+</html>

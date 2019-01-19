@@ -1,0 +1,305 @@
+@charset "UTF-8";
+* {
+	transition-property: all;
+	-ms-transition-property: all;
+	-moz-transition-property: all;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
+}
+html,
+body {
+	font-size: 20px;
+	background: #F9F9F9;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-family: "Microsoft YaHei", sans-serif;
+}
+body {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+img {
+	border: 0px;
+}
+ul,
+li,
+p {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	text-decoration: none;
+	color: #4F4F4F;
+}
+a:hover {
+	text-decoration: none;
+}
+ul,
+li {
+	list-style-type: none;
+	border: none;
+}
+/************************header***************************/
+.i_header{
+    width: 100%;
+    height: 70px;
+    background-color: #0f0f0f;
+}
+.div_nav{
+    width: 1016px;
+    margin: 0 auto;
+}
+.wh>a{
+    float: left;
+    background-color: white;
+    margin-top: 6px;
+}
+.wh>ul>li{
+    margin-top:25px;
+    float: left;
+	padding: 0 20px;
+   	text-align: center;
+}
+.wh>ul>li>a{
+    color: white;
+    font-size: 20px;
+}
+
+/********轮播图的底下按钮********8*/
+.bx-wrapper .bx-pager{
+    position: absolute;
+    top:240px;
+}
+
+/************main-content-band************/
+.main-content-band {
+   /*background-color: #ededed*/
+}
+/****main-content*****/
+.main-content{
+    width: 1016px;
+    margin:0 auto;
+    background-color: #fff;
+    padding-top:6px;
+}
+
+/*******分类*********/
+.kind{
+	height: 40px;
+	margin-bottom: 6px;
+    margin-top:6px;
+}
+.kind .kind-line{
+	font-weight: bolder;
+	color:#FFA500;
+	padding-bottom: 2px;
+}
+.kind .kind-text{
+	line-height: 35px;
+	font-size:20px;
+	color:#999;
+}
+/*******最新公告的信息**********/
+.informInfo{
+	height: 200px;
+	width: 300px;
+	background-color: #DFFFDF;
+	/*padding-top:6px;*/
+	margin-right:20px ;
+    margin-left:10px;
+	float: left;
+}
+.informInfo .informInfo-bell{
+	float: left;
+	margin-right: 10px;
+	margin-left:5px;
+	width:20px;
+	height: 200px;
+}
+.informInfo-content{
+	float:left;
+	width:265px;
+	height: 200px;
+}
+.informInfo-content .title{
+	font-size: 22px;
+	color:#000;
+}
+.informInfo-content .content{
+	font-size:15px;
+	color:#999;
+	font-weight: 200;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+/********课程介绍**********/
+.course-top{              /* 为啥呢？？？？？*/
+    margin-top:240px;
+}
+/********课程介绍的内容**********/
+.courseInfo{
+    background-color: #FFFCEC;
+    width:300px;
+    height: 200px;
+	margin-right:20px ;
+    margin-left:10px;
+    float: left;
+    /*vertical-align:middle;*/
+}
+.courseInfo-img{
+    width:300px;
+    margin: 15px 0 8px 130px;
+}
+.courseInfo-name{
+    width: 300px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.courseInfo-introduce{
+    width: 300px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+/***********学员就业***********/
+.job-top{
+    margin-top:230px;
+}
+/***********学员就业的信息**************/
+.jobInfo{
+
+}
+.jobInfo-job{
+
+}
+.jobInfo-job-student{
+    width:600px;
+    height: 230px;
+    background-color: #ebebeb;
+    float:left;
+    margin-left:10px;
+    margin-right:80px;
+    border-top: 2px solid #ffff00;
+}
+.student-avatar{
+    padding-top: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 140px;
+    height: 200px;
+    margin-right:12px;
+}
+.student-avatar-money{
+    font-size: 17px;
+}
+.student-avatar-company{
+    font-size: 13px;
+}
+.student-avatar-money>span{
+    margin-left:5px;
+}
+.student-avatar-company>span{
+    margin-left:5px;
+}
+.student-info{
+    float: left;
+    width: 340px;
+    height: 200px;
+    padding-top: 15px;
+}
+.student-info-name{
+    color: #666;
+    line-height: normal;
+    font-size: 15px;
+}
+.student-info-stat{
+    font-size: 15px;
+    color:	#FFD306;
+}
+.student-info-construct{
+    letter-spacing: 2px;
+    font-size: 13px;
+    color: #666666;
+}
+.jobInfo-job-company{
+    float: left;
+    width: 280px;
+    height: 230px;
+    padding-top:3px;
+    border-top: 2px solid #4cae4c;
+    position: relative;
+}
+.jobInfo-job-company-title{
+    font-size: 18px;
+    color:#449d44;
+}
+.company-name-salay{
+    margin-top:6px;
+    font-size: 14px;
+}
+.company-salay{
+    position: absolute;
+    right:0px;
+}
+.student-avatar-right{
+    margin-right:10px;
+}
+
+
+/***********校园生活***********/
+.school-top{
+    margin-top:460px;
+}
+/***********校园生活的信息***********/
+.school-life-img{
+    margin-left:20px;
+    border-bottom: 3px solid #999;
+    border-right: 3px solid #9d9d9d;
+}
+
+
+/************企业合作*****************/
+.company-top{
+    margin-top:20px;
+}
+.company-logo{
+    border-bottom: 2px solid #4cae4c;
+}
+/************企业合作的内容*******************/
+.company-logo-img{
+    margin-left:20px;
+}
+
+/**************底部信息******************/
+.footer-content{
+    width: 1016px;
+    margin: 0 auto;
+}
+.footer-content-first{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #999;
+    margin-bottom: 8px;
+    height: 30px;
+    line-height: 30px;
+}
+.footer-content-first>span{
+    margin-right:10px;
+    margin-left:10px;
+}
+
+.footer-content-second,.footer-content-third{
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 3px;
+    height: 30px;
+    line-height: 30px;
+}
+.footer-content-third{
+    margin-bottom: 0px;
+}
